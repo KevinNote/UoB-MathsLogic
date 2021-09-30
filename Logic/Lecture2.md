@@ -99,7 +99,7 @@ We should define symbols' precedence:
 - \+ has higher precedence: (0 + 1) + 2
 - × has higher precedence: 0 + (1 × 2)
 
-# Tip
+## Tip
 
 To avoid ambiguities:
 - define the associativity of symbols
