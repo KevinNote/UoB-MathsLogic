@@ -2,7 +2,7 @@
 
 ## Grammars
 
-BFN, aka [Backus–Naur form](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form).
+BNF, aka [Backus–Naur form](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form).
 
 - Syntax
 - Semantics 语义
@@ -40,7 +40,7 @@ on the right-hand-side.
 
 ### IfElseThen Statement
 
-### Syntax
+#### Syntax
 
 <center>
 <strong>
@@ -48,13 +48,14 @@ on the right-hand-side.
 </strong>
 </center>
 
-### AST
+#### AST
 
 ```
     if then else
      /    |   \
 boolean  exp  exp
 ```
+
 ## AST
 
 AST, aka Abstract Syntax Trees.
@@ -95,7 +96,7 @@ It is (0 + 1) × 2 or 0 + (1 × 2)?
 
 We should define symbols' precedence:
 
-- + has higher precedence: (0 + 1) + 2
+- \+ has higher precedence: (0 + 1) + 2
 - × has higher precedence: 0 + (1 × 2)
 
 # Tip
@@ -106,7 +107,7 @@ To avoid ambiguities:
 - use parentheses to avoid ambiguities or for clarity
 
 Parentheses are sometimes necessary:
-- using left associativity 0 + 1 + 2 stands for0 + (1 + 2)
+- using left associativity 0 + 1 + 2 stands for 0 + (1 + 2)
 - we need parentheses to express 0 + (1 + 2)
 
 ## (Meta)variables
@@ -139,7 +140,7 @@ k<sub>0</sub>\v<sub>0</sub>, . . . , k<sub>n</sub>\v<sub>n</sub>
 </strong>
 </center>
 
-for the substitution that maps k<sub>i</sub> to v<sub>i</sub> for i \belong {0, ..., n}.
+for the substitution that maps k<sub>i</sub> to v<sub>i</sub> for i ∈ {0, ..., n}.
 
 **Operation:** `[val]`.
 
