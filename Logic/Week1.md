@@ -1,4 +1,9 @@
-# Lecture 2 - Symbolic Logic
+# Symbolic Logic
+
+<center>
+<span>30/09/2021</span>
+<a style="text-decoration:none; color: black;" href="https://github.com/KevinZonda">KevinZonda</a>
+</center>
 
 ## Grammars
 

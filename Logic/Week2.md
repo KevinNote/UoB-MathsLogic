@@ -1,13 +1,20 @@
 # Propositional Logic/命题逻辑
 
+<center>
+<span>07/10/2021</span>
+<a style="text-decoration:none; color: black;" href="https://github.com/KevinZonda">KevinZonda</a>
+</center>
+
 ## Vocabulary/词汇表
 
-- Argument 自变量
-- Proposition 命题
-- Premise 前提
-- Conclusion 结论
-- iff - if and only if
-- Hypotheses 假说
+| 单词         | 释意            |
+| ----------- | -------------- |
+| Argument    | 自变量          |
+| Proposition | 命题            |
+| Premise     | 前提            |
+| Conclusion  | 结论            |
+| iff         | if and only if |
+| Hypotheses  | 假说            |
 
 ## Formalise 逻辑表达式
 
@@ -66,7 +73,9 @@ Main connective: a formula
 
 ### 相继式/Sequent
 
+<center><strong>
 Γ ⊢ Σ
+</strong></center>
 
 **Example:**
 
@@ -125,7 +134,7 @@ A  ¬A
 
 ## Natural Deduction
 
-### Discharging/Cancellation of Hypothesis
+### Discharging/Cancellation
 
 #### Implication-Introduction
 
@@ -148,7 +157,7 @@ A → B
 
 ### Negation
 
-#### Negation-Introduction
+#### Introduction
 
 ```
  --- 1
@@ -159,7 +168,7 @@ A → B
 A → ⊥
 ```
 
-#### Negation-Elimination
+#### Elimination
 
 ```
 A    ¬A
@@ -169,7 +178,7 @@ A    ¬A
 
 ### Or
 
-#### Or-Introduction
+#### Introduction
 
 Left:
 
@@ -187,7 +196,7 @@ Right:
 B ∨ A
 ```
 
-#### Or-Elimination
+#### Elimination
 
 ```
 A ∨ B   A → C   B → C
@@ -197,7 +206,7 @@ A ∨ B   A → C   B → C
 
 ### And
 
-#### And-Introduction
+#### Introduction
 
 ```
 A   B
@@ -205,7 +214,7 @@ A   B
 A ∧ B
 ```
 
-#### And-Elimination
+#### Elimination
 
 Left:
 
