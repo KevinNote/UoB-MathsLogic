@@ -1,5 +1,7 @@
 # Propositional Logic/命题逻辑
 
+## Vocabulary/词汇表
+
 - Argument 自变量
 - Proposition 命题
 - Premise 前提
