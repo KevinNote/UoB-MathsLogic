@@ -14,9 +14,7 @@ BNF, aka [Backus–Naur form](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_
     lhs ::= rhs<sub>1</sub> | ... | rhs<sub>1</sub>
 </strong>
 </center>
-
-**Meaning:** this rule means that the left-hand-side `lhs` (a
-[non-terminal symbol](https://en.wikipedia.org/wiki/Terminal_and_nonterminal_symbols)) can expand to **ANY** of the forms rhs<sub>1</sub> to rhs<sub>n</sub>
+**Meaning:** this rule means that the left-hand-side `lhs` (a [non-terminal symbol](https://en.wikipedia.org/wiki/Terminal_and_nonterminal_symbols)) can expand to **ANY** of the forms rhs<sub>1</sub> to rhs<sub>n</sub>
 on the right-hand-side.
 
 ### Definition
