@@ -1,4 +1,4 @@
-# Mathematics in Computer Science
+# 计算机数学基础：负数与有限域
 
 <center>
 <span>07/10/2021</span>
