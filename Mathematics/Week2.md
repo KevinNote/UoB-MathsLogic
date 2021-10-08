@@ -9,7 +9,7 @@ Ring laws + [a × a<sup>-1</sup> = 1 if a ≠ 0]
 
 ## LCF/最大公约数
 
-aka Largest Common Factor
+Aka Largest Common Factor (LCF), Greatest Common Factor (GCF), Greatest Common denominator (GCD), Highest Common Factor (HCF), Greatest Common Divisor (GCD)
 
 ```
 LCF(a, b), b = 0, a ≠ 0
