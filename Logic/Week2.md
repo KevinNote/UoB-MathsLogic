@@ -83,7 +83,7 @@ Main connective: a formula
 
 ⊢, aka 十字转门/turnstile or T型符号/tee.
 
-## Natural Deduction/自然证明
+## Natural Deduction/自然演绎
 
 ### Formal Proof
 
@@ -130,7 +130,15 @@ A  ¬A
   ⊥
 ```
 
-**Attention:** ¬A is defined as ¬A = A → ⊥
+**Attention:** ¬A is defined as ¬A = A → ⊥,  so this elimination is just to demonstrate that
+
+```
+A  A → ⊥
+-------- [→E]
+  ⊥
+```
+
+It uses *Implication-Elimination*, so its name is **→E**.
 
 ## Natural Deduction
 
