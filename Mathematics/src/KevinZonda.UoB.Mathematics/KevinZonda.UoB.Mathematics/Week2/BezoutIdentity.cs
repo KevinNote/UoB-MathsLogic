@@ -3,7 +3,7 @@ namespace KevinZonda.UoB.Mathematics.Week2
 {
     public class BezoutIdentity
     {
-        public BezoutIdentity(int x = 288, int y = 150)
+        public BezoutIdentity(int x, int y)
         {
             var result = GetBezoutIdentityWithCounter(x, y);
             
