@@ -25,8 +25,8 @@ d<sub>n</sub>×b<sup>n</sup> + d<sub>n-1</sub>×b<sup>n-1</sup> + ... + d<sub>1<
 ```
 123.145 = 1.23145 × 10^2
         = 1.23145E2
-          ┕--┬--┙ ┕ exponent
-          mantissa
+          1.23145 mantissa
+          E2      exponent
 ```
 
 ## Floating Point Numbers/浮点数
