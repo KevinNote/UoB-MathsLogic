@@ -5,7 +5,13 @@
 <a style="text-decoration:none; color: black;" href="https://github.com/KevinZonda">KevinZonda</a>
 </center>
 
-Ring laws + [a × a<sup>-1</sup> = 1 if a ≠ 0]
+## Fractions & Rational Numbers/分数与比例
+
+Law of arithmetic (dist.) are only valid when fractions express the same **radio**.
+
+Rational Numbers satisfy Ring laws + [a × a<sup>-1</sup> = 1 if a ≠ 0] (multiplicative inverse), so it is a **field**.
+
+Multiplicative cancellation is valid in every field.
 
 ## LCF/最大公约数
 
