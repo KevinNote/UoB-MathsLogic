@@ -7,7 +7,7 @@
 
 ## Content/目录
 
-- [Code](src/KevinZonda.UoB.Mathematics/KevinZonda.UoB.Mathematics)
+- [Code](src/KevinZonda.UoB.Mathematics/)
 - [Week 1](Week1)
   - [代数基础：运算法则与Peano公理](Week1/Week1-0.md)
   - [抽象代数基础：群，环与域](Week1/Week1-1.md)
