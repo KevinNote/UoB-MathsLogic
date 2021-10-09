@@ -13,6 +13,8 @@ Rational Numbers satisfy Ring laws + [a × a<sup>-1</sup> = 1 if a ≠ 0] (multi
 
 Multiplicative cancellation is valid in every field.
 
+Fraction is be represented by Q (有理数数集).
+
 ## LCF/最大公约数
 
 Aka Largest Common Factor (LCF), Greatest Common Factor (GCF), Greatest Common denominator (GCD), Highest Common Factor (HCF), Greatest Common Divisor (GCD)
