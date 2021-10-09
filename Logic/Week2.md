@@ -16,7 +16,7 @@
 | iff         | if and only if |
 | Hypotheses  | 假说            |
 
-## Formalise 逻辑表达式
+## Formalise Logical Statements/形式化逻辑表达式
 
 Take a symbolic approach
 
@@ -25,7 +25,7 @@ Advantages:
 - Unambiguous
 - More concise
 
-### 符号/Symbols
+### Symbols/符号
 
 - 原子命题（atomic proposition）  
   - ⊤ true
@@ -36,7 +36,7 @@ Advantages:
   - implication/蕴含 →: implies/if ... then ...
   - negation   /否定 ¬: not
 
-### 原子命题/Atomic propositions
+### Atomic Propositions/原子命题
 
 P ::= a | P ∨ P | P ∧ P | P → P | ¬P
 
@@ -46,24 +46,24 @@ atomic propositions are formulas
 
 没有子公式的公式
 
-### 连接词/Connectives
+### Connectives/连接词
 
-#### 析取式/Disjunction
+#### Disjunction/析取式
 
 Aka "inclusive or"
 
 **Note:** Or in English is often exclusive or
 
-#### 优先级/Precedence
+#### Precedence/优先级
 
 Decreasing: ¬, ∧, ∨, →
 
-#### 结合/Associativity
+#### Associativity/结合
 
 Right associative
 use parentheses for clarity
 
-#### 作用域/Scope
+#### Scope/作用域
 
 Connective itself + what it connects
 
@@ -71,7 +71,7 @@ Main connective: a formula
 - the connective whose scope is the whole formula
 - Parse tree's root node
 
-### 相继式/Sequent
+### Sequent/相继式
 
 <center><strong>
 Γ ⊢ Σ

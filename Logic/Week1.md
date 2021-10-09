@@ -1,18 +1,18 @@
-# Symbolic Logic
+# Symbolic Logic/符号逻辑学
 
 <center>
 <span>30/09/2021</span>
 <a style="text-decoration:none; color: black;" href="https://github.com/KevinZonda">KevinZonda</a>
 </center>
 
-## Grammars
+## Grammars/语法
 
 BNF, aka [Backus–Naur form](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form).
 
 - Syntax
 - Semantics 语义
 
-### Formula
+### Formula/公式
 
 <center>
 <strong>
@@ -23,7 +23,7 @@ BNF, aka [Backus–Naur form](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_
 **Meaning:** this rule means that the left-hand-side `lhs` (a [non-terminal symbol](https://en.wikipedia.org/wiki/Terminal_and_nonterminal_symbols)) can expand to **ANY** of the forms rhs<sub>1</sub> to rhs<sub>n</sub>
 on the right-hand-side.
 
-### Definition
+### Definition/定义
 
 | Name   | Meaning |
 | ------ | ------- |
@@ -136,7 +136,6 @@ Chinese: 公理
 ## Substitution
 
 Chinese: 代换
-
 
 <center>
 <strong>
