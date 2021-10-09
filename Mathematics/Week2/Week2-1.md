@@ -1,5 +1,10 @@
 # 计算机数学基础：实数与浮点数
 
+<center>
+<span>09/10/2021</span>
+<a style="text-decoration:none; color: black;" href="https://github.com/KevinZonda">KevinZonda</a>
+</center>
+
 ## Scientific Notation/科学计数法
 
 N ⊂ Z ⊂ Q ⊂ R  
