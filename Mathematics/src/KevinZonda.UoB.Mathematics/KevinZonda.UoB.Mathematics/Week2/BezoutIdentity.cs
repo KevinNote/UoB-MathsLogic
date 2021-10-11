@@ -20,11 +20,11 @@ namespace KevinZonda.UoB.Mathematics.Week2
 
             int count = 0;
 
-            Console.WriteLine(@"| Run |   x   |   y   |  v_x  |  u_y  |  v_y  |");
-            Console.WriteLine(@"-----------------------------------------------");
+            Console.WriteLine(@"| Run |   x   |   y   |  v_x  |  v_x  |  u_y  |  v_y  |");
+            Console.WriteLine(@"-------------------------------------------------------");
             while (y != 0)
             {
-                Console.WriteLine($"| {count,3} | {x, 5} | {y, 5} | {u_x, 5} | {u_y, 5} | {v_y, 5} |");
+                Console.WriteLine($"| {count,3} | {x, 5} | {y, 5} | {u_x, 5} | {v_x, 5} | {u_y, 5} | {v_y, 5} |");
                 int r = x % y;
                 int k = x / y;
 
@@ -43,7 +43,7 @@ namespace KevinZonda.UoB.Mathematics.Week2
                 ++count;
             }
 
-            Console.WriteLine($"| {count,3} | {x, 5} | {y, 5} | {u_x, 5} | {u_y, 5} | {v_y, 5} |");
+            Console.WriteLine($"| {count,3} | {x, 5} | {y, 5} | {u_x, 5} | {v_x, 5} | {u_y, 5} | {v_y, 5} |");
             
             return (x, u_x, v_x);
         }
