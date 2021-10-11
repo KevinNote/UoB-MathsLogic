@@ -20,7 +20,7 @@ namespace KevinZonda.UoB.Mathematics.Week2
 
             int count = 0;
 
-            Console.WriteLine(@"| Run |   x   |   y   |  v_x  |  v_x  |  u_y  |  v_y  |");
+            Console.WriteLine(@"| Run |   x   |   y   |  u_x  |  v_x  |  u_y  |  v_y  |");
             Console.WriteLine(@"-------------------------------------------------------");
             while (y != 0)
             {
