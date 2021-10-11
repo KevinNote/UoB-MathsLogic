@@ -57,7 +57,7 @@ N<sub>less</sub> = N<sub>LCF</sub> × K<sub>2</sub>
 通过算式寻求为 K<sub>1</sub> = K<sub>2</sub> 的场景
 
 
-### 辗转相除法/Euclidean Algorithm
+### Euclidean Algorithm/辗转相除法
 
 Aka 欧几里得算法
 
@@ -97,7 +97,17 @@ N<sub>greater</sub> = K × N<sub>less</sub> + R, R ∈ [0, N<sub>less</sub>), K 
 
 N<sub>greater</sub> mod N<sub>less</sub> = R
 
-### Proof
+### 理论基础
+
+a = qb + r  
+a, b, q, r \in Z
+所以 GCD(a, b) = GCD(b, r)
+
+Pf. if d | a and d | b, then d | b and d | r = (a - qb)  
+if d | b and d | r, then d | (qb + r), d | a  
+Then a, b 的公因子集合与 b 与 r 的公因子集合相同，继而最大公因子相同
+
+### Proof/证明
 
 Loop invariant: lcf(a, b) = lcf (x, y)
 
@@ -117,6 +127,9 @@ QED.
 ## Bézout's Identity/裴蜀等式
 
 aka 贝祖定理/Bézout's lemma
+
+- 对于不全为 0 的整数 a, b, d，方程 sa + tb = d 存在整数解 s **当且仅当** LCF(a, b)|d
+- 方程 sa + tb = d 称作裴蜀等式
 
 In Z<sub>m</sub>, assume that m in a prime number
 
@@ -171,7 +184,34 @@ Z<sub>5</sub> or GF(5) is a field.
 Z<sub>4</sub> or GF(4) is **NOT** a field.
 
 
-### Extended Euclidean algorithm/扩展欧几里得算法
+
+### Example/例子
+
+GCD(210, 715)
+
+```
+             210  715 715=3*210+85
+210=2*85+40  210  85
+              40  85  85=2*40+5
+   40=8*5+0   40  5
+               0  5
+GCD(715, 210) = 5
+5 = 85 - 2 * 40
+             ^^ = 85 - 2 * (210 - 2 * 85)
+  = 5 * 85 - 2 * 210
+        ^^      = 5 * (715 - 3 * 210) - 2 * 210
+  = 5 * 715 - 17  * 210
+        ^^^         ^^^
+```
+### Proof/证明
+
+- 充分性
+  - 通过回代法可知 sa+tb = GCD(a, b)存在整数解，设其为 s<sub>0</sub>, t<sub>0</sub>
+  - 若 d = k \* GCD(a, b)，则其 k * s<sub>0</sub>, k * t<sub>0</sub>是方程的一个解
+- 必要性
+  - 若方程 sa + tb = d 存在整数解 s 和 t 则 GCD(a, b) | (sa+tb)=d
+
+### Extended Euclidean Algorithm/扩展欧几里得算法
 
 ```
 x <- a
@@ -231,3 +271,7 @@ public static (int x, int u, int v) GetBezoutIdentity(int x, int y)
     return (x, u_x, v_x);
 }
 ```
+
+## References/参考
+
+- "欧几里得算法与婓蜀等式 - YouTube" - <https://www.youtube.com/watch?v=2A3a05gkI90>
