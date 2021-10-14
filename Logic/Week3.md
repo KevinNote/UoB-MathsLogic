@@ -77,7 +77,7 @@ A ∧ B [∧ E_L]                Γ, A ∧ B ⊢ C
   A
 ```
 
-### Identity and Stuctural Rules
+### Identity and Structural Rules
 
 #### Identity
 
