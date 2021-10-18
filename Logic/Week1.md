@@ -25,10 +25,10 @@ on the right-hand-side.
 
 ### Definition/定义
 
-| Name   | Meaning |
-| ------ | ------- |
-| Arity  | Number of arguments |
-| Fixity | Where is the operator<br>prefix, infix & postfix |
+| Name    | Meaning |
+| ------- | ------- |
+| Arity （元数、数量）  | Number of arguments |
+| Fixity （固定性） | Where is the operator<br>prefix, infix & postfix |
 
 **Example:**
 
