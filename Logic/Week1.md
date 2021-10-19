@@ -21,7 +21,7 @@ BNF, aka [Backus–Naur form](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_
 </center>
 
 **Meaning:** this rule means that the left-hand-side `lhs` (a [non-terminal symbol](https://en.wikipedia.org/wiki/Terminal_and_nonterminal_symbols)) can expand to **ANY** of the forms rhs<sub>1</sub> to rhs<sub>n</sub>
-on the right-hand-side.
+on the right-hand-side. "::=" means "equal by definition"/"定义相等". Can simply write "=" instead.
 
 ### Definition/定义
 

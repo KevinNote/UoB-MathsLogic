@@ -35,6 +35,7 @@ Advantages:
   - disjunction/析取 ∨: or
   - implication/蕴含 →: implies/if ... then ...
   - negation   /否定 ¬: not
+  - Arbitrary  /任意∀: for all objects, 对于所有对象
 
 ### Atomic Propositions/原子命题
 
