@@ -130,7 +130,8 @@ A metavariable is a variable
 within the language, called the **metatheory**, used to describe and study a theory at hand.
 
 ## Axiom Schemata
-Explanation: An axiom schema is a formula in the metalanguage of an axiomatic system, in which one or more schematic variables appear.
+
+Explanation: An axiom schema is a formula in the metalanguage of an axiomatic system, in which one or more schematic variables appear.  
 Chinese: 公理模式：公理模式是个在公理系统的语言中的一个合式公式，其中有一个以上的模式变数出现。
 
 ## Substitution
