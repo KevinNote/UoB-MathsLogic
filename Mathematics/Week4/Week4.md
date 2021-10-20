@@ -89,6 +89,8 @@ A ∩ B  = A ∪ B
 |  ∅  | false, ff, ⊥    |
 |  X  | true, tt, T     |
 
+**Boolean Algebra:** A set of elements. Operations: ∨, ∧, ¬; Constants: T, ⊥. Satisfies the laws above.
+
 false ∨ true = true (by Annihilation)
 
 | ∨ | F | T |
