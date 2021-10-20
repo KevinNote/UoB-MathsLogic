@@ -72,16 +72,16 @@ N × N = {(0, 0), (0, 1), (1, 0), (0, 2), ...}
 
 If a set has the same size as N, then it is called **"countable"** or **"countably infinite"**
 
-Theorem, The set of Java programme is countable (Unicode<sup>*</sup>)
+**Theorem:** The set of Java programme is countable (Unicode<sup>*</sup>)
 
 ## Uncountability/不可数
 
 |R| ≩ |N|
 
-Proof: Cantor's diagonal argument
+**Proof:** Cantor's diagonal argument
 [中文](https://zh.wikipedia.org/zh-hans/%E5%B0%8D%E8%A7%92%E8%AB%96%E8%AD%89%E6%B3%95)
 [ENG](https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument)  
-Conclusion: the listing is incomplete: it misses a
+**Conclusion:** the listing is incomplete: it misses a
 Any listing will miss some real numbers
 
 **Theorem:** the set R of real number is uncountable
