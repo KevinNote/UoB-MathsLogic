@@ -19,3 +19,5 @@
   - [计算机数学基础：实数与浮点数](Week2/Week2-1.md)
 - [Week 3](Week3)
   - [集合论基础：集合](Week3/Week3.md)
+- [Week 4](Week4)
+  - [布尔代数基础：集合与布尔代数](Week4/Week4)
