@@ -13,7 +13,6 @@ Left is premises right is conclusion.
 
 Use `Γ` and `∆` for lists of formulas separated by commas.
 
-
 We will **eliminate** connectives from the **premises** (the **left**)
 and **introduce** connectives from the **conclusion** (the **right**).
 
@@ -21,99 +20,66 @@ and **introduce** connectives from the **conclusion** (the **right**).
 
 ### Basic
 
-```
-Natural Deduction                Sequent Calculus
+| Natural Deduction                                            | Sequent Calculus                                             |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+|                                                              |                                                              |
+| $\cfrac{A \qquad A\rightarrow B}{B}{[\rightarrow E]}$        | $\cfrac{\Gamma \vdash A \qquad \Gamma, B \vdash C}{\Gamma, A \rightarrow B \vdash C}{[\rightarrow L]}$ |
+|                                                              |                                                              |
+| $\cfrac{\begin{matrix}\cfrac{}{A}1\\...\\B\\\end{matrix}}{A\rightarrow B}{1\ [\rightarrow I]}$ | $\cfrac{\Gamma, A \vdash B}{\Gamma \vdash A \rightarrow B}{[\rightarrow R]}$ |
+|                                                              |                                                              |
+| Natural Deduction                                | Sequent Calculus                                             |
+| ------------------------------------------------ | ------------------------------------------------------------ |
+|                                                  |                                                              |
+| $\cfrac{A \qquad \neg A}{\bot}{[\rightarrow E]}$ | $\cfrac{\Gamma, A \vdash \bot}{\Gamma \vdash \neg A}{[\neg R]}$ |
+|                                                  |                                                              |
 
-A → B   A                        Γ ⊢ A   Γ, B ⊢ C
----------[→ E]                   ----------------- [→ L]
-    B                              Γ, A → B ⊢ C
+| Natural Deduction                                            | Sequent Calculus                                             |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+|                                                              |                                                              |
+| $\cfrac{A}{A \vee B}{[\vee I_L]}$                            | $\cfrac{\Gamma \vdash A}{\Gamma \vdash A \vee B}{[\vee R_1]}$ |
+|                                                              |                                                              |
+| $\cfrac{A}{B \vee A}{[\vee I_R]}$                            | $\cfrac{\Gamma \vdash A}{\Gamma \vdash B \vee A}{[\vee R_2]}$ |
+|                                                              |                                                              |
+| $\cfrac{A\vee B \qquad A\rightarrow C \qquad B \rightarrow C}{C}{[\vee E]}$ | $\cfrac{\Gamma, A \vdash C \qquad \Gamma, B \vdash C}{\Gamma, A \vee B\vdash C}{[\vee L]}$ |
+|                                                              |                                                              |
 
-  --- 1
-   A
-  ...
-   B                             Γ, A ⊢ B
--------- 1 [→ I]                ---------- [→ R]
- A → B                          Γ ⊢ A → B
-```
-
-```
-Natural Deduction              Sequent Calculus
-
-A    ¬A                        Γ, A ⊢ ⊥
-------- [¬ E]                  --------- [¬ R]
-   ⊥                            Γ ⊢ ¬A
-```
-
-
-```
-Natural Deduction              Sequent Calculus
-
-  A                              Γ ⊢ A
------ [∨ I_L]                  ---------- [∨ R_L]
-A ∨ B                          Γ ⊢ A ∨ B
-
-  A                              Γ ⊢ A
------ [∨ I_R]                  ---------- [∨ R_2]
-B ∨ A                          Γ ⊢ B ∨ A
-
-A ∨ B  A → C  B → C            Γ, A ⊢ C   Γ, B ⊢ C
---------------------- [∨ E]    -------------------- [∨ L]
-         C                       Γ, A ∨ B ⊢ C
-```
-
-```
-Natural Deduction             Sequent Calculus
-
-A   B                         Γ ⊢ A  Γ ⊢ B
------ [∧ I]                   ------------ [∧ R]
-A ∧ B                          Γ ⊢ A ∧ B
-
-A ∧ B
------ [∧ E_R]
-  B                           Γ, A, B ⊢ C
-                             ------------- [∧ L]
-A ∧ B [∧ E_L]                Γ, A ∧ B ⊢ C
------
-  A
-```
+| Natural Deduction                 | Sequent Calculus                                             |
+| --------------------------------- | ------------------------------------------------------------ |
+|||
+|$\cfrac{A \qquad B}{A \wedge B}{[\wedge I]}$|$\cfrac{\Gamma \vdash A \qquad \Gamma\vdash B}{\Gamma \vdash A \wedge B }{[\wedge R]}$|
+|||
+|$\cfrac{A \wedge B}{B}{[\wedge E_R]}$||
+||$\cfrac{\Gamma, A, B \vdash C}{\Gamma, A \wedge B \vdash C }{[\wedge L]}$|
+|$\cfrac{A \wedge B}{A}{[\wedge E_L]}$||
 
 ### Identity and Structural Rules
 
 #### Identity
 
-```
------ [Id]
-A ⊢ A
-```
+$$
+\cfrac{}{A \vdash A}{[Id]}
+$$
 
 #### Exchange
 
-```
-Γ, B, A, ∆ ⊢ C
--------------- [X]
-Γ, A, B, ∆ ⊢ C
-```
+$$
+\cfrac{\Gamma, B, A, \Delta \vdash C}{\Gamma, A, B. \Delta \vdash C}[X]
+$$
 
 #### Weakening
 
-```
- Γ ⊢ B
--------- [W]
-Γ, A ⊢ B
-```
+$$
+\cfrac{\Gamma \vdash B}{\Gamma, A \vdash B}{[W]}
+$$
 
 #### Contraction
 
-```
-Γ, A, A ⊢ B
------------ [C]
-  Γ, A ⊢ B
-```
+$$
+\cfrac{\Gamma, A, A \vdash B}{\Gamma, A \vdash B}{[C]}
+$$
 
 #### Cut
 
-```
-Γ ⊢ B   Γ, B ⊢ A
------------------ [Cut]
-     Γ ⊢ A
-```
+$$
+\cfrac{\Gamma \vdash B \qquad \Gamma, B \vdash A}{\Gamma \vdash B}{[Cut]}
+$$

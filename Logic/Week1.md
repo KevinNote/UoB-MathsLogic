@@ -14,14 +14,12 @@ BNF, aka [Backus–Naur form](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_
 
 ### Formula/公式
 
-<center>
-<strong>
-    lhs ::= rhs<sub>1</sub> | ... | rhs<sub>1</sub>
-</strong>
-</center>
+$$
+lhs::=rhs_1 | ... | rhs_n
+$$
 
 **Meaning:** this rule means that the left-hand-side `lhs` (a [non-terminal symbol](https://en.wikipedia.org/wiki/Terminal_and_nonterminal_symbols)) can expand to **ANY** of the forms rhs<sub>1</sub> to rhs<sub>n</sub>
-on the right-hand-side. "::=" means "equal by definition"/"定义相等". Can simply write "=" instead.
+on the right-hand-side. "$::=$" means "equal by definition"/"定义相等". Can simply write "=" instead.
 
 ### Definition/定义
 
@@ -64,7 +62,8 @@ boolean  exp  exp
 
 AST, aka Abstract Syntax Trees.
 
-**Example:** 0 + 1 + 2
+**Example:** $0 + 1 + 2$
+
 ```
     +
    / \
@@ -83,25 +82,25 @@ To be simple, it is the basic rule of direction of process: from left to right o
 
 Chinese: 歧义
 
-**Example:** 0 + 1 + 2  
-It is (0 + 1) + 2 or 0 + (1 + 2)?
+**Example:** $0+1+2$  
+It is $(0 + 1) + 2$ or $0 + (1 + 2)$?
 
 We should define its associativity:
 
-- left associativity: (0 + 1) + 2
-- right associativity: 0 + (1 + 2)
+- left associativity: $(0 + 1) + 2$
+- right associativity: $0 + (1 + 2)$
 
 ### Precedence
 
 Chinese: 优先级
 
-**Example:** 0 + 1 × 2  
-It is (0 + 1) × 2 or 0 + (1 × 2)?
+**Example:** $0 + 1 \times 2$  
+It is $(0 + 1) \times 2$ or $0 \times (1 × 2)$?
 
 We should define symbols' precedence:
 
-- \+ has higher precedence: (0 + 1) + 2
-- × has higher precedence: 0 + (1 × 2)
+- $+$ has higher precedence: $(0 + 1) + 2$
+- $\times$ has higher precedence: $0 + (1 \times 2)$
 
 ## Tip
 
@@ -111,18 +110,17 @@ To avoid ambiguities:
 - use parentheses to avoid ambiguities or for clarity
 
 Parentheses are sometimes necessary:
-- using left associativity 0 + 1 + 2 stands for 0 + (1 + 2)
-- we need parentheses to express 0 + (1 + 2)
+- using left associativity $0 + 1 + 2$ stands for $0 + (1 + 2)$
+- we need parentheses to express $0 + (1 + 2)$
 
 ## (Meta)variables
 
 Aka schematic variables.
 
-```
-P → P
-```
-
-`P` acts as variable which can range ***ALL POSSIBLE*** exp/formulas.
+$$
+P \rightarrow P
+$$
+$P$ acts as variable which can range ***ALL POSSIBLE*** exp/formulas.
 
 Why is it called a “metavariable”?
 
@@ -138,13 +136,11 @@ Chinese: 公理模式：公理模式是个在公理系统的语言中的一个�
 
 Chinese: 代换
 
-<center>
-<strong>
-k<sub>0</sub>\v<sub>0</sub>, . . . , k<sub>n</sub>\v<sub>n</sub>
-</strong>
-</center>
+$$
+k_0\backslash{v_0}, ..., k_n\backslash{v_n}
+$$
 
-for the substitution that maps k<sub>i</sub> to v<sub>i</sub> for i ∈ {0, ..., n}.
+for the substitution that maps $k_i$ to $v_i$ for $i \in {0, ..., n}$.
 
 **Operation:** `[val]`.
 
@@ -152,5 +148,6 @@ for the substitution that maps k<sub>i</sub> to v<sub>i</sub> for i ∈ {0, ...,
 
 takes an equality `eq` and a substitutions, and replaces all occurrences of the keys of `s` by the corresponding values in `eq`.
 
-**Example:** (exp<sub>1</sub> + exp<sub>2</sub> = exp<sub>2</sub> + exp<sub>1</sub>)\[exp<sub>1</sub>\1] return?  
-1 + exp<sub>2</sub> = exp<sub>2</sub> + 1
+**Example:** $exp_1+exp_2=exp_2+exp_1[exp_1\backslash1]$ return?  
+
+$1+exp_2=exp_2+1$

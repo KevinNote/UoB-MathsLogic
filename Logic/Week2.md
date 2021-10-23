@@ -28,18 +28,20 @@ Advantages:
 ### Symbols/符号
 
 - 原子命题（atomic proposition）  
-  - ⊤ true
-  - ⊥ false
+  - $\top$ true
+  - $\bot$ false
 - 逻辑连接词（connectives）
-  - conjunction/合取 ∧: and
-  - disjunction/析取 ∨: or
-  - implication/蕴含 →: implies/if ... then ...
-  - negation   /否定 ¬: not
-  - Arbitrary  /任意∀: for all objects, 对于所有对象
+  - conjunction/合取 $\wedge$: and
+  - disjunction/析取 $\vee$: or
+  - implication/蕴含 $\rightarrow$: implies/if ... then ...
+  - negation   /否定 $\neg$: not
+  - Arbitrary  /任意 $\forall$: for all objects, 对于所有对象
 
 ### Atomic Propositions/原子命题
 
-P ::= a | P ∨ P | P ∧ P | P → P | ¬P
+$$
+P ::= a | P \vee P | P \wedge P | P \rightarrow P | \neg P
+$$
 
 a ranges over atomic propositions
 
@@ -57,7 +59,7 @@ Aka "inclusive or"
 
 #### Precedence/优先级
 
-Decreasing: ¬, ∧, ∨, →
+Decreasing: $\neg, \wedge, \vee, \rightarrow$
 
 #### Associativity/结合
 
@@ -74,15 +76,15 @@ Main connective: a formula
 
 ### Sequent/相继式
 
-<center><strong>
-Γ ⊢ Σ
-</strong></center>
+$$
+\Gamma\vdash\Sigma
+$$
 
 **Example:**
 
-- p → q, ¬q ⊢ ¬p
+- $p\rightarrow q, \neg q \vdash \neg p$
 
-⊢, aka 十字转门/turnstile or T型符号/tee.
+$\vdash$, aka 十字转门/turnstile or T型符号/tee.
 
 ## Natural Deduction/自然演绎
 
@@ -102,44 +104,33 @@ Main connective: a formula
 
 ### Implication-Elimination
 
-```
-A    A → B
----------- [→E]
-    B
-```
+$$
+\cfrac{A \qquad A \rightarrow B}{B}{[\rightarrow E]}
+$$
 
 ### False-Elimination
 
-```
- ⊥
---- [⊥E]
- A
-```
+$$
+\cfrac{\bot}{A}{[\bot E]}
+$$
 
 ### True-Introduction
 
-```
---- [⊤I]
- ⊤
-```
+$$
+\cfrac{}{\top}{[\top I]}
+$$
 
 ### Negation-Elimination
 
-```
-A  ¬A 
------ [→E]
-  ⊥
-```
+$$
+\cfrac{A \qquad \neg A}{\bot}{[\rightarrow E]}
+$$
 
-**Attention:** ¬A is defined as ¬A = A → ⊥,  so this elimination is just to demonstrate that
-
-```
-A  A → ⊥
--------- [→E]
-  ⊥
-```
-
-It uses *Implication-Elimination*, so its name is **→E**.
+**Attention:** $\neg A$ is defined as $\neg A = A \rightarrow \bot$ ,  so this elimination is just to demonstrate that
+$$
+\cfrac{A \qquad A \rightarrow \bot}{\bot}{[\rightarrow E]}
+$$
+It uses *Implication-Elimination*, so its name is **$\rightarrow E$**.
 
 ## Natural Deduction
 
@@ -147,96 +138,66 @@ It uses *Implication-Elimination*, so its name is **→E**.
 
 #### Implication-Introduction
 
-```
- --- 1
-  A
- ...
-  B
------ 1 [→I]
-A → B
-```
+$$
+\cfrac{\begin{matrix}\cfrac{}{A}1\\...\\B\\\end{matrix}}{A\rightarrow B}{1\ [\rightarrow I]}
+$$
 
 Tip: We don't have to make use of A in which case we can just omit it:
-
-```
-  B
------
-A → B
-```
+$$
+\cfrac{B}{A \rightarrow B}{[\rightarrow I]}
+$$
 
 ### Negation
 
 #### Introduction
 
-```
- --- 1
-  A
- ...
-  ⊥
------ 1 [¬I]
-A → ⊥
-```
+
+$$
+\cfrac{\begin{matrix}\cfrac{}{A}1\\...\\\bot\\\end{matrix}}{A\rightarrow\bot}{1\ [\neg I]}
+$$
 
 #### Elimination
 
-```
-A    ¬A
-------- [¬E]
-   ⊥
-```
+$$
+\cfrac{A\qquad \neg A}{\bot}{\neg E}
+$$
 
 ### Or
 
 #### Introduction
 
 Left:
-
-```
-  A
------ [∨I_L]
-A ∨ B
-```
-
+$$
+\cfrac{A}{A \vee B}{[\vee I_L]}
+$$
 Right:
-
-```
-  A
------ [∨I_R]
-B ∨ A
-```
+$$
+\cfrac{A}{B \vee A}{[\vee I_R]}
+$$
 
 #### Elimination
 
-```
-A ∨ B   A → C   B → C
---------------------- [∨E]
-          C
-```
+$$
+\cfrac{A\vee B \qquad A\rightarrow C \qquad B \rightarrow C}{C}{[\vee E]}
+$$
 
 ### And
 
 #### Introduction
 
-```
-A   B
------ [∧I]
-A ∧ B
-```
+
+$$
+\cfrac{A \qquad B}{A \wedge B}{[\wedge I]}
+$$
 
 #### Elimination
 
 Left:
-
-```
-A ∧ B
------ [∧E_L]
-  A
-```
-
+$$
+\cfrac{A \wedge B}{A}{[\wedge E_L]}
+$$
 Right:
 
-```
-A ∧ B
------ [∧E_R]
-  B
-```
+$$
+\cfrac{A \wedge B}{B}{[\wedge E_R]}
+$$
