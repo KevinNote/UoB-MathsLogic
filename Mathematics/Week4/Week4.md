@@ -73,9 +73,9 @@ A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)
 ### de Morgan law
 
 ```
-______    _    _
+______   _   _
 A ∪ B  = A ∩ B
-______    _    _
+______   _   _
 A ∩ B  = A ∪ B
 ```
 
@@ -89,7 +89,9 @@ A ∩ B  = A ∪ B
 |  ∅  | false, ff, ⊥    |
 |  X  | true, tt, T     |
 
-false ∨ true = true (by Anihalation)
+**Boolean Algebra:** A set of elements. Operations: ∨, ∧, ¬; Constants: T, ⊥. Satisfies the laws above.
+
+false ∨ true = true (by Annihilation)
 
 | ∨ | F | T |
 | - | - | - |
