@@ -1,4 +1,9 @@
-# Classical Reasoning
+# Propositional Logic - Classical Reasoning/命题逻辑 - 经典逻辑
+
+<center>
+<span>24/10/2021</span>
+<a style="text-decoration:none; color: black;" href="https://github.com/KevinZonda">KevinZonda</a>
+</center>
 
 ## Basic Laws
 
