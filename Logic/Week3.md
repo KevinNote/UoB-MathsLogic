@@ -84,3 +84,9 @@ $$
 $$
 \cfrac{\Gamma \vdash B \qquad \Gamma, B \vdash A}{\Gamma \vdash B}{[Cut]}
 $$
+
+## Fomulas
+
+![](img\wk3-0.png)  
+![](img\wk3-1.png)  
+![](img\wk3-2.png)
