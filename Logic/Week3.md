@@ -27,6 +27,7 @@ and **introduce** connectives from the **conclusion** (the **right**).
 |                                                              |                                                              |
 | $\cfrac{\begin{matrix}\cfrac{}{A}1\\...\\B\\\end{matrix}}{A\rightarrow B}{1\ [\rightarrow I]}$ | $\cfrac{\Gamma, A \vdash B}{\Gamma \vdash A \rightarrow B}{[\rightarrow R]}$ |
 |                                                              |                                                              |
+
 | Natural Deduction                                | Sequent Calculus                                             |
 | ------------------------------------------------ | ------------------------------------------------------------ |
 |                                                  |                                                              |
@@ -45,9 +46,9 @@ and **introduce** connectives from the **conclusion** (the **right**).
 
 | Natural Deduction                 | Sequent Calculus                                             |
 | --------------------------------- | ------------------------------------------------------------ |
-|||
+|                                   |                                                              |
 |$\cfrac{A \qquad B}{A \wedge B}{[\wedge I]}$|$\cfrac{\Gamma \vdash A \qquad \Gamma\vdash B}{\Gamma \vdash A \wedge B }{[\wedge R]}$|
-|||
+|                                   |                                                              |
 |$\cfrac{A \wedge B}{B}{[\wedge E_R]}$||
 ||$\cfrac{\Gamma, A, B \vdash C}{\Gamma, A \wedge B \vdash C }{[\wedge L]}$|
 |$\cfrac{A \wedge B}{A}{[\wedge E_L]}$||
