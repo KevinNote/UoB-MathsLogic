@@ -11,3 +11,4 @@
 - [Week 2 - Propositional Logic/命题逻辑](Week2.md)
 - [Week 3 - Propositional Logic - Sequent Calculus/命题逻辑 - 相继式演算](Week3.md)
 - [Week 4 - Propositional Logic - Classical Reasoning/命题逻辑 - 经典逻辑](Week4.md)
+- [Week 5 - Propositional Logic - Semantics/命题逻辑 - 语义](Week5.md)
