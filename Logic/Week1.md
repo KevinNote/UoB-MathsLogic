@@ -15,7 +15,7 @@ BNF, aka [Backus–Naur form](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_
 ### Formula/公式
 
 $$
-lhs::=rhs_1 | ... | rhs_n
+lhs::=rhs_1 \mid ... \mid rhs_n
 $$
 
 **Meaning:** this rule means that the left-hand-side `lhs` (a [non-terminal symbol](https://en.wikipedia.org/wiki/Terminal_and_nonterminal_symbols)) can expand to **ANY** of the forms rhs<sub>1</sub> to rhs<sub>n</sub>
@@ -118,7 +118,7 @@ Parentheses are sometimes necessary:
 Aka schematic variables.
 
 $$
-P \rightarrow P
+P \to P
 $$
 $P$ acts as variable which can range ***ALL POSSIBLE*** exp/formulas.
 

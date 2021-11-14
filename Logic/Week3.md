@@ -23,15 +23,15 @@ and **introduce** connectives from the **conclusion** (the **right**).
 | Natural Deduction                                            | Sequent Calculus                                             |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 |                                                              |                                                              |
-| $\cfrac{A \qquad A\rightarrow B}{B}{[\rightarrow E]}$        | $\cfrac{\Gamma \vdash A \qquad \Gamma, B \vdash C}{\Gamma, A \rightarrow B \vdash C}{[\rightarrow L]}$ |
+| $\cfrac{A \qquad A\to B}{B}{[\to E]}$        | $\cfrac{\Gamma \vdash A \qquad \Gamma, B \vdash C}{\Gamma, A \to B \vdash C}{[\to L]}$ |
 |                                                              |                                                              |
-| $\cfrac{\begin{matrix}\cfrac{}{A}1\\...\\B\\\end{matrix}}{A\rightarrow B}{1\ [\rightarrow I]}$ | $\cfrac{\Gamma, A \vdash B}{\Gamma \vdash A \rightarrow B}{[\rightarrow R]}$ |
+| $\cfrac{\begin{matrix}\cfrac{}{A}1\\...\\B\\\end{matrix}}{A\to B}{1\ [\to I]}$ | $\cfrac{\Gamma, A \vdash B}{\Gamma \vdash A \to B}{[\to R]}$ |
 |                                                              |                                                              |
 
 | Natural Deduction                                | Sequent Calculus                                             |
 | ------------------------------------------------ | ------------------------------------------------------------ |
 |                                                  |                                                              |
-| $\cfrac{A \qquad \neg A}{\bot}{[\rightarrow E]}$ | $\cfrac{\Gamma, A \vdash \bot}{\Gamma \vdash \neg A}{[\neg R]}$ |
+| $\cfrac{A \qquad \neg A}{\bot}{[\to E]}$ | $\cfrac{\Gamma, A \vdash \bot}{\Gamma \vdash \neg A}{[\neg R]}$ |
 |                                                  |                                                              |
 
 | Natural Deduction                                            | Sequent Calculus                                             |
@@ -41,7 +41,7 @@ and **introduce** connectives from the **conclusion** (the **right**).
 |                                                              |                                                              |
 | $\cfrac{A}{B \vee A}{[\vee I_R]}$                            | $\cfrac{\Gamma \vdash A}{\Gamma \vdash B \vee A}{[\vee R_2]}$ |
 |                                                              |                                                              |
-| $\cfrac{A\vee B \qquad A\rightarrow C \qquad B \rightarrow C}{C}{[\vee E]}$ | $\cfrac{\Gamma, A \vdash C \qquad \Gamma, B \vdash C}{\Gamma, A \vee B\vdash C}{[\vee L]}$ |
+| $\cfrac{A\vee B \qquad A\to C \qquad B \to C}{C}{[\vee E]}$ | $\cfrac{\Gamma, A \vdash C \qquad \Gamma, B \vdash C}{\Gamma, A \vee B\vdash C}{[\vee L]}$ |
 |                                                              |                                                              |
 
 | Natural Deduction                 | Sequent Calculus                                             |

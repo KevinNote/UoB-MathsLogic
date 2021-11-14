@@ -109,11 +109,11 @@ $$
 ## Syntax/语法
 
 $$
-t ::= x\ |\ f(t, ..., t)
+t ::= x \mid f(t, ..., t)
 $$
 
 $$
-P ::= p(t, ..., t)\ |\ \neg P\ |\ P \wedge P \ |\ P \vee P\ |\ P \to P\ |\ \forall x.P\ |\ \exists x.P
+P ::= p(t, ..., t) \mid \neg P \mid P \wedge P  \mid P \vee P \mid P \to P \mid \forall x.P \mid \exists x.P
 $$
 
 - $x$ ranges over variables

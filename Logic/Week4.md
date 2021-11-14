@@ -11,17 +11,17 @@
 
 For each A we can always prove $A$ or $\neg A$
 
-To make it simple $\vdash A \or \neg A$
+To make it simple $\vdash A \vee \neg A$
 
 $$
-\cfrac{}{A \or \neg A}{[LEM]}
+\cfrac{}{A \vee \neg A}{[LEM]}
 $$
 
 ### Double Negation Elimination (DNE)
 
 $\neg \neg A \vdash A$
 
-Equivalently, $(\neg A)\rightarrow \bot \vdash A$
+Equivalently, $(\neg A)\to \bot \vdash A$
 
 $$
 \cfrac{\neg\neg A}{A}{[DNE]}
@@ -37,17 +37,17 @@ We should use them by **constructive(构造性)** or **intuitionistic(直觉)** 
 
 #### LEM implies DNE
 
-Assuming $A\or \neg A$, infer $\neg\neg A \vdash A$
+Assuming $A\vee \neg A$, infer $\neg\neg A \vdash A$
 
 ![](img/wk4-0.png)
 
 <!--$$
-\cfrac{A \or\neg A
+\cfrac{A \vee\neg A
           \qquad
           \cfrac
               {\cfrac{}{A}{1}}
-              {A \rightarrow A}
-              {\ 1\ [\rightarrow I]}
+              {A \to A}
+              {\ 1\ [\to I]}
           \qquad
           \cfrac
               {
@@ -68,16 +68,16 @@ Assuming $A\or \neg A$, infer $\neg\neg A \vdash A$
                   {A}
                   {\ 2 \ [\bot E]}
               }
-              {\neg A\rightarrow A}
-              {\ 2 \ [\rightarrow I]}
+              {\neg A\to A}
+              {\ 2 \ [\to I]}
       }
       {A}
-      {[\or E]}
+      {[\vee E]}
 $$-->
 
 #### DNE implies LME
 
-Assuming $\neg\neg A \vdash A$, infer $\vdash A\or \neg A$
+Assuming $\neg\neg A \vdash A$, infer $\vdash A\vee \neg A$
 
 ![](img/wk4-1.png)
 
@@ -90,7 +90,7 @@ Assuming $\neg\neg A \vdash A$, infer $\vdash A\or \neg A$
         {
             \cfrac {}
             {
-                \neg (A \or \neg A)
+                \neg (A \vee \neg A)
             }{1}
             \qquad
             \cfrac
@@ -101,7 +101,7 @@ Assuming $\neg\neg A \vdash A$, infer $\vdash A\or \neg A$
                     {
                         \cfrac
                         {}
-                        {\neg(A \or \neg A)}
+                        {\neg(A \vee \neg A)}
                         {1}
                         \qquad
                         \cfrac
@@ -109,8 +109,8 @@ Assuming $\neg\neg A \vdash A$, infer $\vdash A\or \neg A$
                             \cfrac {}
                             {A}{2}
                         }
-                        {A \or \neg A}
-                        {[\or I_L]}
+                        {A \vee \neg A}
+                        {[\vee I_L]}
                     }
                     {\bot}
                     {[\neg E]}
@@ -118,28 +118,28 @@ Assuming $\neg\neg A \vdash A$, infer $\vdash A\or \neg A$
                 {\neg A}
                 {\ 2\ [\neg I]}
             }
-            {A \or \neg A}
-            {\ [\or I]}
+            {A \vee \neg A}
+            {\ [\vee I]}
         }
         {\bot}
         {[\neg E]}
     }
-    {\neg\neg(A \or \neg A)}
+    {\neg\neg(A \vee \neg A)}
     {\ 1\ [\neg I]}
 }
-{A\or \neg A}
+{A\vee \neg A}
 {[DNE]}
 $$-->
 
 ### Contrapositive/换质位推理
 
-Given an implication $A \rightarrow B$, the formula $\neg B \rightarrow\neg A$ is called the **contrapositive**.
+Given an implication $A \to B$, the formula $\neg B \to\neg A$ is called the **contrapositive**.
 
-**Proof:** $A\rightarrow B \vdash \neg B \rightarrow \neg A$
+**Proof:** $A\to B \vdash \neg B \to \neg A$
 
 ![](img/wk4-2.png)
 
-**Proof:** $\neg B \rightarrow \neg A \vdash A\rightarrow B$
+**Proof:** $\neg B \to \neg A \vdash A\to B$
 
 ![](img/wk4-3.png)
 
@@ -147,7 +147,7 @@ Given an implication $A \rightarrow B$, the formula $\neg B \rightarrow\neg A$ i
 
 $$
 \cfrac{}
-{\Gamma\vdash A \or\neg A}{[LEM]}
+{\Gamma\vdash A \vee\neg A}{[LEM]}
 $$
 
 $$
@@ -161,31 +161,31 @@ $$
 
 
 
-| **Intuitionistic**                                           | **Classic**                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-|                                                              |                                                              |
-| $\cfrac{\Gamma\vdash A\qquad\Gamma, B\vdash C}{\Gamma, A \rightarrow B \vdash C}[\rightarrow E]$ | $\cfrac{\Gamma\vdash A, \Delta\qquad\Gamma, B\vdash \Delta'}{\Gamma, A \rightarrow B \vdash \Delta, \Delta'}[\rightarrow L]$ |
-|                                                              |                                                              |
-| $\cfrac{\Gamma, A \vdash B}{\Gamma\vdash A \rightarrow B}{[\rightarrow R]}$ | $\cfrac{\Gamma, A \vdash B, \Delta}{\Gamma\vdash A \rightarrow B, \Delta}{[\rightarrow R]}$ |
-|                                                              |                                                              |
-|                                                              |                                                              |
-| $\cfrac{\Gamma\vdash B \qquad \Gamma, B\vdash A}{\Gamma\vdash A}{[Cut]}$ | $\cfrac{\Gamma_1\vdash B,\Delta_1 \qquad \Gamma_2, B\vdash \Delta_2}{\Gamma_1, \Gamma_2\vdash \Delta_1, \Delta_2}{[Cut]}$ |
-|                                                              |                                                              |
-| $\cfrac{\Gamma\vdash A \qquad \Gamma\vdash B}{\Gamma\vdash A\and B}{[\and R]}$ | $\cfrac{\Gamma_1\vdash A,\Delta_1 \qquad \Gamma_2\vdash B, \Delta_2}{\Gamma_1, \Gamma_2\vdash A\and B, \Delta_1, \Delta_2}{[\and R]}$ |
-|                                                              |                                                              |
-|                                                              |                                                              |
-| $\cfrac{\Gamma, A\vdash C \qquad \Gamma, B\vdash C}{\Gamma, A \or B \vdash C}{[\or L]}$ | $\cfrac{\Gamma_1, A\vdash \Delta_1 \qquad \Gamma_2, B\vdash \Delta_2}{\Gamma_1, \Gamma_2, A \or B \vdash \Delta_1, \Delta_2}{[\or L]}$ |
-|                                                              |                                                              |
-|                                                              |                                                              |
-| $\cfrac{\Gamma\vdash A}{\Gamma, \neg A \vdash B}{[\neg L]}$  | $\cfrac{\Gamma\vdash A, \Delta}{\Gamma, \neg A \vdash \Delta}{[\neg L]}$ |
-|                                                              |                                                              |
-| $\cfrac{\Gamma, A\vdash \bot}{\Gamma\vdash \neg A}{[\neg R]}$ | $\cfrac{\Gamma, A\vdash \Delta}{\Gamma\vdash \neg A, \Delta}{[\neg R]}$ |
-|                                                              |                                                              |
-|                                                              |                                                              |
-| $\cfrac{\Gamma\vdash A}{\Gamma\vdash A \or B}{[\or R_L]}$    |                                                              |
-|                                                              | $\cfrac{\Gamma\vdash A, B, \Delta}{\Gamma\vdash A \or B}{[\or R]}$ |
-| $\cfrac{\Gamma\vdash A}{\Gamma\vdash B \or A}{[\or R_2]}$    |                                                              |
-|                                                              |                                                              |
+| **Intuitionistic**                                                                        | **Classic**                                                                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                           |                                                                                                                                           |
+| $\cfrac{\Gamma\vdash A\qquad\Gamma, B\vdash C}{\Gamma, A \to B \vdash C}[\to E]$          | $\cfrac{\Gamma\vdash A, \Delta\qquad\Gamma, B\vdash \Delta'}{\Gamma, A \to B \vdash \Delta, \Delta'}[\to L]$                              |
+|                                                                                           |                                                                                                                                           |
+| $\cfrac{\Gamma, A \vdash B}{\Gamma\vdash A \to B}{[\to R]}$                               | $\cfrac{\Gamma, A \vdash B, \Delta}{\Gamma\vdash A \to B, \Delta}{[\to R]}$                                                               |
+|                                                                                           |                                                                                                                                           |
+|                                                                                           |                                                                                                                                           |
+| $\cfrac{\Gamma\vdash B \qquad \Gamma, B\vdash A}{\Gamma\vdash A}{[Cut]}$                  | $\cfrac{\Gamma_1\vdash B,\Delta_1 \qquad \Gamma_2, B\vdash \Delta_2}{\Gamma_1, \Gamma_2\vdash \Delta_1, \Delta_2}{[Cut]}$                 |
+|                                                                                           |                                                                                                                                           |
+| $\cfrac{\Gamma\vdash A \qquad \Gamma\vdash B}{\Gamma\vdash A\wedge B}{[\wedge R]}$        | $\cfrac{\Gamma_1\vdash A,\Delta_1 \qquad \Gamma_2\vdash B, \Delta_2}{\Gamma_1, \Gamma_2\vdash A\wedge B, \Delta_1, \Delta_2}{[\wedge R]}$ |
+|                                                                                           |                                                                                                                                           |
+|                                                                                           |                                                                                                                                           |
+| $\cfrac{\Gamma, A\vdash C \qquad \Gamma, B\vdash C}{\Gamma, A \vee B \vdash C}{[\vee L]}$ | $\cfrac{\Gamma_1, A\vdash \Delta_1 \qquad \Gamma_2, B\vdash \Delta_2}{\Gamma_1, \Gamma_2, A \vee B \vdash \Delta_1, \Delta_2}{[\vee L]}$  |
+|                                                                                           |                                                                                                                                           |
+|                                                                                           |                                                                                                                                           |
+| $\cfrac{\Gamma\vdash A}{\Gamma, \neg A \vdash B}{[\neg L]}$                               | $\cfrac{\Gamma\vdash A, \Delta}{\Gamma, \neg A \vdash \Delta}{[\neg L]}$                                                                  |
+|                                                                                           |                                                                                                                                           |
+| $\cfrac{\Gamma, A\vdash \bot}{\Gamma\vdash \neg A}{[\neg R]}$                             | $\cfrac{\Gamma, A\vdash \Delta}{\Gamma\vdash \neg A, \Delta}{[\neg R]}$                                                                   |
+|                                                                                           |                                                                                                                                           |
+|                                                                                           |                                                                                                                                           |
+| $\cfrac{\Gamma\vdash A}{\Gamma\vdash A \vee B}{[\vee R_L]}$                               |                                                                                                                                           |
+|                                                                                           | $\cfrac{\Gamma\vdash A, B, \Delta}{\Gamma\vdash A \vee B}{[\vee R]}$                                                                      |
+| $\cfrac{\Gamma\vdash A}{\Gamma\vdash B \vee A}{[\vee R_2]}$                               |                                                                                                                                           |
+|                                                                                           |                                                                                                                                           |
 
 ### Other Structural Formulas
 

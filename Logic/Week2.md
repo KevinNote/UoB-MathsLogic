@@ -33,14 +33,14 @@ Advantages:
 - 逻辑连接词（connectives）
   - conjunction/合取 $\wedge$: and
   - disjunction/析取 $\vee$: or
-  - implication/蕴含 $\rightarrow$: implies/if ... then ...
+  - implication/蕴含 $\to$: implies/if ... then ...
   - negation   /否定 $\neg$: not
   - Arbitrary  /任意 $\forall$: for all objects, 对于所有对象
 
 ### Atomic Propositions/原子命题
 
 $$
-P ::= a | P \vee P | P \wedge P | P \rightarrow P | \neg P
+P ::= a \mid P \vee P \mid P \wedge P \mid P \to P \mid \neg P
 $$
 
 a ranges over atomic propositions
@@ -59,7 +59,7 @@ Aka "inclusive or"
 
 #### Precedence/优先级
 
-Decreasing: $\neg, \wedge, \vee, \rightarrow$
+Decreasing: $\neg, \wedge, \vee, \to$
 
 #### Associativity/结合
 
@@ -82,7 +82,7 @@ $$
 
 **Example:**
 
-- $p\rightarrow q, \neg q \vdash \neg p$
+- $p\to q, \neg q \vdash \neg p$
 
 $\vdash$, aka 十字转门/turnstile or T型符号/tee.
 
@@ -105,7 +105,7 @@ $\vdash$, aka 十字转门/turnstile or T型符号/tee.
 ### Implication-Elimination
 
 $$
-\cfrac{A \qquad A \rightarrow B}{B}{[\rightarrow E]}
+\cfrac{A \qquad A \to B}{B}{[\to E]}
 $$
 
 ### False-Elimination
@@ -123,14 +123,14 @@ $$
 ### Negation-Elimination
 
 $$
-\cfrac{A \qquad \neg A}{\bot}{[\rightarrow E]}
+\cfrac{A \qquad \neg A}{\bot}{[\to E]}
 $$
 
-**Attention:** $\neg A$ is defined as $\neg A = A \rightarrow \bot$ ,  so this elimination is just to demonstrate that
+**Attention:** $\neg A$ is defined as $\neg A = A \to \bot$ ,  so this elimination is just to demonstrate that
 $$
-\cfrac{A \qquad A \rightarrow \bot}{\bot}{[\rightarrow E]}
+\cfrac{A \qquad A \to \bot}{\bot}{[\to E]}
 $$
-It uses *Implication-Elimination*, so its name is **$\rightarrow E$**.
+It uses *Implication-Elimination*, so its name is **$\to E$**.
 
 ## Natural Deduction
 
@@ -139,12 +139,12 @@ It uses *Implication-Elimination*, so its name is **$\rightarrow E$**.
 #### Implication-Introduction
 
 $$
-\cfrac{\begin{matrix}\cfrac{}{A}1\\...\\B\\\end{matrix}}{A\rightarrow B}{1\ [\rightarrow I]}
+\cfrac{\begin{matrix}\cfrac{}{A}1\\...\\B\\\end{matrix}}{A\to B}{1\ [\to I]}
 $$
 
 Tip: We don't have to make use of A in which case we can just omit it:
 $$
-\cfrac{B}{A \rightarrow B}{[\rightarrow I]}
+\cfrac{B}{A \to B}{[\to I]}
 $$
 
 ### Negation
@@ -153,7 +153,7 @@ $$
 
 
 $$
-\cfrac{\begin{matrix}\cfrac{}{A}1\\...\\\bot\\\end{matrix}}{A\rightarrow\bot}{1\ [\neg I]}
+\cfrac{\begin{matrix}\cfrac{}{A}1\\...\\\bot\\\end{matrix}}{A\to\bot}{1\ [\neg I]}
 $$
 
 #### Elimination
@@ -178,7 +178,7 @@ $$
 #### Elimination
 
 $$
-\cfrac{A\vee B \qquad A\rightarrow C \qquad B \rightarrow C}{C}{[\vee E]}
+\cfrac{A\vee B \qquad A\to C \qquad B \to C}{C}{[\vee E]}
 $$
 
 ### And
