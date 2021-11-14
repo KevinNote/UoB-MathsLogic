@@ -23,3 +23,5 @@
   - [布尔代数基础：集合与布尔代数](Week4/Week4.md)
 - [Week 5](Week5)
   - [集合论基础：二元关系](Week5/Week5.md)
+- [Week 6](Week6)
+  - [集合论基础：函数](Week6/Week6.md)
