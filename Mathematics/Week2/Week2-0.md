@@ -13,7 +13,7 @@ Rational Numbers satisfy Ring laws + [a × a<sup>-1</sup> = 1 if a ≠ 0] (multi
 
 Multiplicative cancellation is valid in every field.
 
-Fraction is be represented by Q (有理数数集).
+Fraction is be represented by $\mathbb{Q}$ (有理数数集).
 
 ## LCF/最大公约数
 
@@ -40,21 +40,28 @@ public static int Lcf(int x, int y)
 }
 ```
 
-**解释：** 存在数 x 和 y，假定其公约数为 g  
-则必然存在 x = g × k<sub>0</sub> 以及 y = g × k<sub>1</sub>  
-如果 k<sub>0</sub> = k<sub>1</sub>， 则 x = y，那么其本身就为最大公约数  
-如果不是，可以假定 x > y  
-我们可以获得两个更小间隙  
-x = x - y = g × (k<sub>0</sub> - k<sub>1</sub>) = g × k<sub>2</sub>  
-y = g × k<sub>1</sub>  
-对于新生成的 x, y 进行再次大数减小数，直到求出 x = y 的时刻。
+**解释：** 存在数 $x$ 和 $y$，假定其公约数为 $g$  
+则必然存在 $x=g\times k_0$ 以及 $y=g\times k_1$  
+如果 $k_0=k_1$， 则 $x = y$，那么其本身就为最大公约数  
+如果不是，可以假定 $x > y$  
+我们可以获得两个更小间隙
 
-其逻辑使用了基础为：  
-N<sub>greater</sub> = N<sub>less</sub> + N<sub>r</sub>  
-N<sub>r</sub> = N<sub>LCF</sub> × K<sub>0</sub>  
-N<sub>greater</sub> = N<sub>LCF</sub> × K<sub>1</sub>   
-N<sub>less</sub> = N<sub>LCF</sub> × K<sub>2</sub>   
-通过算式寻求为 K<sub>1</sub> = K<sub>2</sub> 的场景
+$$
+x = x - y = g × (k_0 - k_1) = g × k_2\\
+y = g × k_1
+$$
+
+对于新生成的 $x, y$ 进行再次大数减小数，直到求出 $x = y$ 的时刻。
+
+其逻辑使用了基础为：
+$$
+N_{\text{greater}}=N_{\text{less}}+N_{\text{r}}\\
+N_{\text{r}}=N_{\text{LCF}}\times K_0\\
+N_{\text{greater}}=N_{\text{LCF}}\times K_1\\
+N_{\text{less}}=N_{\text{LCF}}\times K_2
+$$
+
+通过算式寻求为 $K_1=K_2$  的场景
 
 
 ### Euclidean Algorithm/辗转相除法
@@ -87,25 +94,33 @@ public static int Lcf(int x, int y)
 
 **解释：** 辗转相除法本质上是对更相减损术的优化。通过更相减损术的基础逻辑，我们可以获得定义
 
-N<sub>greater</sub> = N<sub>less</sub> + N<sub>r</sub>
+$$
+N_{\text{greater}} = N_{\text{less}} + N_{\text{r}}
+$$
 
-但是如果 N<sub>greater</sub> 足够大，那我们可以存在以下关系式
+但是如果 $N_{\text{greater}}$ 足够大，那我们可以存在以下关系式
 
-N<sub>greater</sub> = K × N<sub>less</sub> + R, R ∈ [0, N<sub>less</sub>), K ∈ Z<sup>+</sup>
+$$
+N_{\text{greater}}=K \times N_{\text{less}}+R, R \in [0, N_{\text{less}}), K \in \Z^+
+$$
 
-如果使用更相减损术，我们需要进行 K 次相减。而如果使用取模运算，我们则可以一次性得出所需要的部分 R：
+如果使用更相减损术，我们需要进行 $K$ 次相减。而如果使用取模运算，我们则可以一次性得出所需要的部分 $R$：
 
-N<sub>greater</sub> mod N<sub>less</sub> = R
+$$
+N_{\text{greater}} \mod N_{\text{less}} = R
+$$
 
 ### 理论基础
 
-a = qb + r  
+$$
+a = qb + r\\
 a, b, q, r \in Z
-所以 GCD(a, b) = GCD(b, r)
+$$
+所以 $\text{GCD}(a, b) = \text{GCD}(b, r)$
 
-Pf. if d | a and d | b, then d | b and d | r = (a - qb)  
-if d | b and d | r, then d | (qb + r), d | a  
-Then a, b 的公因子集合与 b 与 r 的公因子集合相同，继而最大公因子相同
+Pf. if $d \mid a$ and $d \mid b$, then $d \mid b$ and $d \mid r = (a - qb)$  
+if $d \mid b$ and $d \mid r$, then $d \mid (qb + r), d \mid a$  
+Then $a$, $b$ 的公因子集合与 $b$ 与 $r$ 的公因子集合相同，继而最大公因子相同
 
 ### Proof/证明
 
@@ -128,30 +143,30 @@ QED.
 
 aka 贝祖定理/Bézout's lemma
 
-- 对于不全为 0 的整数 a, b, d，方程 sa + tb = d 存在整数解 s **当且仅当** LCF(a, b)|d
-- 方程 sa + tb = d 称作裴蜀等式
+- 对于不全为 0 的整数 $a, b, d$，方程 $sa + tb = d$ 存在整数解 s **当且仅当** LCF(a, b)|d
+- 方程 $sa + tb = d$ 称作裴蜀等式
 
-In Z<sub>m</sub>, assume that m in a prime number
+In $\Z_m$, assume that m in a prime number
 
-a ≠ 0 in Z<sub>m</sub>
+$$
+a \neq 0 \text{ in } \Z_m \\
+\text{lcf}(a, m) = 1 = u \times a + v \times m \equiv u \times a\\
+a^{-1} = u
+$$
 
-lcf(a, m) = 1 = u × a + v × m ≡ u × a
+If $m$ is prime, then every number in $\Z_m$, ≠ 0, has a multiplication inverse. Hence, $\Z_m$ is a field.
 
-a<sup>-1</sup> = u
-
-If `m` is prime, then every number in Z<sub>m</sub>, ≠ 0, has a multiplication inverse. Hence, Z<sub>m</sub> is a field.
-
-**Example:** m = 2
+**Example:** $m = 2$
 
 |  ×  |  0  |  1  |
 | :-: | :-: | :-: |
 |  0  |  0  |  0  |
 |  1  |  0  |  1  |
 
-Z<sub>2</sub> aka GF(2), **"Galois Field"**.
+$\Z_2$ aka GF(2), **"Galois Field"**.
 
 
-**Example:** m = 5
+**Example:** $m = 5$
 
 |  ×  |  0  |  1  |  2  |  3  |  4  |
 | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -161,14 +176,14 @@ Z<sub>2</sub> aka GF(2), **"Galois Field"**.
 |  3  |  0  |  3  |**[1]**|  4  |  2  |
 |  4  |  0  |  4  |  3  |  2  |**[1]**|
 
-1<sup>-1</sup> = 1  
-2<sup>-1</sup> = 3  
-3<sup>-1</sup> = 2  
-4<sup>-1</sup> = 4  
+$1^{-1} = 1$  
+$2^{-1} = 3$  
+$3^{-1} = 2$  
+$4^{-1} = 4$  
 
-Z<sub>5</sub> or GF(5) is a field.
+$\Z_5$ or GF(5) is a field.
 
-**Example:** m = 4
+**Example:** $m = 4$
 
 |  ×  |  0  |  1  |  2  |  3  |
 | :-: | :-: | :-: | :-: | :-: |
@@ -177,11 +192,11 @@ Z<sub>5</sub> or GF(5) is a field.
 |  2  |  0  |  2  |  0  |  2  |
 |  3  |  0  |  3  |  2  |**[1]**|
 
-1<sup>-1</sup> = 1  
-**2<sup>-1</sup> does not exist**   
-3<sup>-1</sup> = 3  
+$1^{-1} = 1$  
+**$2^{-1}$ does not exist**   
+$3^{-1} = 3$
 
-Z<sub>4</sub> or GF(4) is **NOT** a field.
+$\Z_4$ or GF(4) is **NOT** a field.
 
 
 
@@ -206,10 +221,10 @@ GCD(715, 210) = 5
 ### Proof/证明
 
 - 充分性
-  - 通过回代法可知 sa+tb = GCD(a, b)存在整数解，设其为 s<sub>0</sub>, t<sub>0</sub>
-  - 若 d = k \* GCD(a, b)，则其 k * s<sub>0</sub>, k * t<sub>0</sub>是方程的一个解
+  - 通过回代法可知 $sa+tb = \text{GCD}(a, b)$存在整数解，设其为 $s_0, t_0$
+  - 若 $d = k \times \text{GCD}(a, b)$，则其 $k \times s_0, k \times t_0$是方程的一个解
 - 必要性
-  - 若方程 sa + tb = d 存在整数解 s 和 t 则 GCD(a, b) | (sa+tb)=d
+  - 若方程 $sa + tb = d$ 存在整数解 $s$ 和 $t$ 则 $\text{GCD}(a, b) \mid (sa+tb)=d$
 
 ### Extended Euclidean Algorithm/扩展欧几里得算法
 

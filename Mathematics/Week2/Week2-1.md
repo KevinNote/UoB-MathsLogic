@@ -7,20 +7,22 @@
 
 ## Scientific Notation/科学计数法
 
-N ⊂ Z ⊂ Q ⊂ R  
-自然数 ⊂ 整数 ⊂ 有理数 ⊂ 实数
+$$
+\N \subset \Z \subset \mathbb{Q} \subset \R\\
+\text{自然数} \subset \text{整数} \subset \text{有理数} \subset \text{实数}
+$$
 
-b ≥ 2  
-实数可表示为  
+当进制 ≥ 2 时，实数可表示为：
 
-<center>
-d<sub>n</sub>d<sub>n-1</sub>...d<sub>1</sub>d<sub>0</sub> . d<sub>-1</sub>d<sub>-2</sub>...  
-</center>
+$$
+d_nd_{n-1}\cdots d_1d_0\ .\ d_{-1} d_{-2} \cdots
+$$
 
 其值为  
-<center>
-d<sub>n</sub>×b<sup>n</sup> + d<sub>n-1</sub>×b<sup>n-1</sup> + ... + d<sub>1</sub>×b<sup>1</sup> + d<sub>0</sub>×b<sup>0</sup> <strong>+ d<sub>-1</sub>×b<sup>-1</sup> + d<sub>-2</sub>×b<sup>-2</sup></strong>
-</center>
+
+$$
+d_n\times b^n + d_{n-1} \times b^{n-1} + \cdots + d_1 \times b^1 + d_0 \times b^0 + d_{-1} \times b^{-1} + \cdots + d_{-n} \times b^{-n}
+$$
 
 ```
 123.145 = 1.23145 × 10^2
@@ -31,7 +33,7 @@ d<sub>n</sub>×b<sup>n</sup> + d<sub>n-1</sub>×b<sup>n-1</sup> + ... + d<sub>1<
 
 ## Floating Point Numbers/浮点数
 
-b = 2, mantissa of 24 digits, exponent of 8 digits, sign of 1 digit.
+$b = 2$, mantissa of 24 digits, exponent of 8 digits, sign of 1 digit.
 
 **Attention:** mantissa cannot start with 0, if it is 0, the number is not normalised.
 
@@ -39,9 +41,11 @@ Therefore, in binary, the mantissa can only be 1, so we can ignore it. So we jus
 
 We only need to store:
 
-d<sub>0</sub> . d<sub>-1</sub>d<sub>-2</sub> ... d<sub>-23</sub>
+$$
+d_0\ .\ d_{-1} d_{-2} \cdots d_{-23}
+$$
 
-d<sub>0</sub> must be 1, so no need be stored.
+$d_0$ must be 1, so no need be stored.
 
 ### Register
 
@@ -58,7 +62,7 @@ d<sub>0</sub> must be 1, so no need be stored.
 
 ### Examples/样例
 
-1/5<sub>10</sub> = 0.001100110011...<sub>2</sub> = 1.1001100E-3
+${(1/5)}_{10} = (0.001100110011...)_{2} = (1.1001100E-3)_{2}$
 
 
 ## Another View/换个角度
@@ -67,16 +71,16 @@ d<sub>0</sub> must be 1, so no need be stored.
 
 In a fixed exponent `n`, we have:
 
-- Min: 1.000 ... 00 E n
-- Max: 1.111 ... 11 E n
+- Min: $1.000 ... 00 E n$
+- Max: $1.111 ... 11 E n$
 
-So we have 2<sup>23</sup> floats number with a fixed exponent.
+So we have $2^{33}$ floats number with a fixed exponent.
 
-对于当 n = 0，浮点数范围其实为 [1, 2)
+对于当 $n = 0$，浮点数范围其实为 $[1, 2)$
 
-n = -1, [0.5, 1)
+$n = -1, [0.5, 1)$
 
-范围为 [2<sup>n</sup>, 2<sup>n+1</sup>)
+范围为 $[2^n, 2^{n+1})$
 
 ![](img/E.png)
 
@@ -84,13 +88,13 @@ n = -1, [0.5, 1)
 
 | 数集 | 样例                 | 运算       | 代数系统 |
 | ---- | -------------------- | ---------- | -------- |
-| N    | 0, 1, 2, ...         | +, ×       |          |
-| Z    | -2, -1, 0, 1, 2, ... | +, ×, -    | Ring     |
-| Q    | a/b                  | +, ×, -, ÷ | Field    |
-| R    | 3.14159...           | +, ×, -, ÷ | Field    |
+| $\N$    | 0, 1, 2, ...         | +, ×       |          |
+| $Z$    | -2, -1, 0, 1, 2, ... | +, ×, -    | Ring     |
+| $\mathbb{Q}$    | a/b                  | +, ×, -, ÷ | Field    |
+| $\R$    | 3.14159...           | +, ×, -, ÷ | Field    |
 
-- Computer integers behave like Z<sub>2<sup>32</sup></sub> is not a field.
-- There are other field, Z<sub>m</sub>, m is prime.
+- Computer integers behave like $\Z_{2^{32}}$ is not a field.
+- There are other field, $\Z_m$, $m$ is prime.
 - Floating point numbers do not form a field.
 
 ## Reference
