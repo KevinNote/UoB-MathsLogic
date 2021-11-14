@@ -1,5 +1,10 @@
 # Predicate Logic - Syntax/谓词逻辑 - 语法
 
+<center>
+<span>14/11/2021</span>
+<a style="text-decoration:none; color: black;" href="https://github.com/KevinZonda">KevinZonda</a>
+</center>
+
 ## Basic/基础
 
 Propositional logic does not allow stating **properties of** and **relations between** "objects"
