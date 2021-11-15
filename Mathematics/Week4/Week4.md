@@ -14,70 +14,80 @@
                 ^ is a subset/part of
 ```
 
-{} ⊆ A ∅
+$$
+\left\{\right\} \subseteq A\ \empty
+$$
 
 {} and ∅ are both empty set.
 
-B = {x ∈ A | x satisfies c}
+$$
+B = \left\{x \in A \mid x \text{ satisfies } c\right\}\\
 
-B ⊆ A iff ∀x. x ∈ B ⇒ x ∈ A
+B \subseteq A \text{ iff } \forall x. x \in B \Rightarrow x \in A\\
 
-A = B iff ∀x. x ∈ B ⇔ x ∈ A
-      iff A ⊆ B and B ⊆ A
+A = B \text{ iff } \forall x. x \in B \Leftrightarrow x \in A\\
+\qquad\text{ iff } A \subseteq B \wedge B \subseteq A
+$$
 
 ### Intersection/交集
 
-B<sub>1</sub>, B<sub>2</sub> ⊆ A
 
-B<sub>1</sub>, B<sub>2</sub> = {x ∈ A | x ∈ B<sub>1</sub> and x ∈ B<sub>2</sub>}
-
-B ∩ ∅ = ∅
-B ∩ A = B
-B<sub>1</sub> ∩ B<sub>2</sub> = B<sub>2</sub> ∩ B<sub>1</sub>  
-B<sub>1</sub> ∩ (B<sub>2</sub> ∩ B<sub>3</sub>) = (B<sub>1</sub> ∩ B<sub>2</sub>) ∩ B<sub>3</sub>
-
+$$
+B_1, B_2 \subseteq A\\
+B_1 \cap B_2 = \left\{ x \in A \mid x \in B_1 \wedge x \in B_2 \right\}\\
+B \cap \empty = \empty\\
+B \cap A = B \\
+B_1 \cap B_2 = B_2 \cap B_1\\
+B_1 \cap (B_2 \cap B_3)=(B_1 \cap B_2) \cap B_3
+$$
 
 ### Complement/补集
 
-```
-B ⊆ A
-_
-B = {x ∈ A|x ∉ B}
-```
+$$
+B \subseteq A\\
+\overline{B} = \left\{ x \in A \mid x \notin B\right\}
+$$
+
 ### Set Difference
 
-B<sub>1</sub>, B<sub>2</sub> ⊆ A  
-B<sub>1</sub> \ B<sub>2</sub> = {x ∈ A | x ∈ B<sub>1</sub> and x ∉ B<sub>2</sub>}  
-B \ ∅ = B  
-B \ A = ∅  
-B<sub>1</sub> \ B<sub>2</sub> = B<sub>1</sub> \ (B<sub>2</sub> ∩ B<sub>2</sub>)
-
+$$
+B_1, B_2 \subseteq A\\
+B_1 \backslash B_2  = \left\{ x \in A \mid x \in B_1 \wedge x \notin B_2 \right\} \\
+B \backslash \empty = B \\
+B \backslash A = \empty \\
+B_1 \backslash B_2 = B_1 \backslash (B_2 \cap B_2)
+$$
 
 ## Powerset/幂集
 
 原集合中所有的子集（包括全集和空集）构成的集族
 
-P{a, b, c} = {∅, {a}, {b}, {c}, {a, b}, {a, c}, {b, c}, {a, b, c}}
+$$
+\mathcal{P}\left\{a, b, c\right\} = \left\{∅, \left\{a\right\}, \left\{b\right\}, \left\{c\right\}, \left\{a, b\right\}, \left\{a, c\right\}, \left\{b, c\right\}, \left\{a, b, c\right\}\right\}
+$$
 
 **Theorem:** The carinality of PA is strictly larger than the card. of A.
 
+$$
 |N| < |R| < |PR|
+$$
 
 ## Propositional logic and Boolean algebras
 
 ### Distributivity Laws
 
-A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)  
-A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)
+$$
+A \cap (B \cup C) = (A \cap B) \cup (A \cap C)\\  
+A \cup (B \cap C) = (A \cup B) \cap (A \cup C)
+$$
 
 ### de Morgan law
 
-```
-______   _   _
-A ∪ B  = A ∩ B
-______   _   _
-A ∩ B  = A ∪ B
-```
+
+$$
+\overline{A \cup B} = \overline{A} \cap \overline{B}\\
+\overline{A \cap B} = \overline{A} \cup \overline{B}\\
+$$
 
 ### Symbols
 
