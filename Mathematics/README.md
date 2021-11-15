@@ -25,3 +25,5 @@
   - [集合论基础：二元关系](Week5/Week5.md)
 - [Week 6](Week6)
   - [集合论基础：函数](Week6/Week6.md)
+- [Week 7](Week7)
+  - [证明论基础：归纳](Week7/Week7.md)
