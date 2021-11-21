@@ -27,3 +27,5 @@
   - [集合论基础：函数](Week6/Week6.md)
 - [Week 7](Week7)
   - [证明论基础：归纳](Week7/Week7.md)
+- [Week 8](Week8)
+  - [线性代数：高斯消元法](Week8/Week8.md)
