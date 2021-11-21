@@ -15,3 +15,4 @@
 - [Week 6-0 - Propositional Logic - Equivalences & Normal Forms/命题逻辑 - 等价与范式](Week6-0.md)
 - [Week 6-1 - Propositional Logic - SAT/命题逻辑 - 布尔可满足性问题](Week6-1.md)
 - [Week 7 - Predicate Logic - Syntax/谓词逻辑 - 语法](Week7.md)
+- [Week 8 - Predicate Logic - Natural Deduction Proofs/谓词逻辑 - 自然演绎](Week8.md)
