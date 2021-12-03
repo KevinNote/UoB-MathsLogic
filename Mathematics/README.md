@@ -29,3 +29,5 @@
   - [证明论基础：归纳](Week7/Week7.md)
 - [Week 8](Week8)
   - [线性代数：高斯消元法](Week8/Week8.md)
+- [Week 9](Week9)
+  - [线性代数：解析几何](Week9/Week9.md)
