@@ -278,9 +278,9 @@ $$
 \vec{0}
 $$
 
-我们可以定义向量代数为
+我们可以定义向量代数（algebra of vector, or vector space）为
 - 是一个对象（被称为向量）的集合
-- 拥有 =, -, $\vec{0}$, $\cdot$
+- 拥有 +, -, $\vec{0}$, $\cdot$
 - Laws are satisfied
 
 我们可以认为向量代数是一些数字的元组（tuples）（$\mathbb{K}$ 的元素）
@@ -288,7 +288,7 @@ $$
 如果 $V$ 是向量的一个代数，并且 $\vec{v}\in V$
 
 $$
-W = \left\{ \vec{w} in V \mid \vec{w} = s \cdot \vec{v} \text{ for some } s\right\}
+W = \left\{ \vec{w} \in V \mid \vec{w} = s \cdot \vec{v} \text{ for some } s\right\}
 $$
 
 ![](img/w.png)
