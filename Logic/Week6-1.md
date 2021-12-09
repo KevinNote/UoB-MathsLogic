@@ -73,7 +73,7 @@ Davis-Putman-Logemann-Loveland algorithms.
     - 对于子句中所有 $p$的文字，考虑 $\cdots \wedge (\cdots\vee p \vee\cdots)\wedge\cdots$，考虑到子句中的 $p = F$，固整个子句是依旧不确定，所以可以移除 $p$ 变成 $\cdots \wedge (\cdots\vee\cdots)\wedge\cdots$
 - 保持执行直到
   - 所有子句被移除（全真）：则为 *SAT*
-  - 有一个子句是空的（一个是假的）：回溯刀步骤二，给 $p$ 选择一个不同的值，如果无法回溯，则返回 *UNSAT*
+  - 有一个子句是空的（一个是假的）：回溯到步骤二，给 $p$ 选择一个不同的值，如果无法回溯，则返回 *UNSAT*
 
 **Example:** to $(\neg p \vee q \vee r) \wedge (p \vee q \vee r) \wedge (p \vee q \vee \neg r) \wedge (\neg p \vee \neg q \vee r)$
 
