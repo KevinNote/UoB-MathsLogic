@@ -159,7 +159,7 @@ $$
 #### Elimination
 
 $$
-\cfrac{A\qquad \neg A}{\bot}{\neg E}
+\cfrac{A\qquad \neg A}{\bot}{[\neg E]}
 $$
 
 ### Or
