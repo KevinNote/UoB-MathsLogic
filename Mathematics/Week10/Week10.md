@@ -135,6 +135,8 @@ $$
 Equation \Longleftrightarrow Parametric\ Representation
 $$
 
+#### 线
+
 $$
 x=P+s\cdot \vec{v}=
 \left(
@@ -163,72 +165,12 @@ d=-v_2p_1+v_1p_2
 \end{matrix}
 $$
 
-去证明其，我们可以反推：  
-我们假定公式为 $x_1 = M + N \cdot x_2$
-$$
-x=
-\left(
-    \begin{matrix}
-        x_1\\
-        x_2
-    \end{matrix}
-\right)=
-\left(
-    \begin{matrix}
-        M+Nx_2\\
-        x_2
-    \end{matrix}
-\right)=
-\left(
-    \begin{matrix}
-        M\\
-        0
-    \end{matrix}
-\right)+x_2 \cdot
-\left(
-    \begin{matrix}
-        N\\
-        1
-    \end{matrix}
-\right)
-$$
-对于公式 $x_1 = M + N \cdot x_2$ 我们可以 reform 为 $x_1 -N \cdot x_2 =M$
+**证明：**
 
-在这种场景下，我们可以发现 $\left\{\begin{aligned}
-a & = & 1 \\
-b & = & -N\\
-d & = & M
-\end{aligned}\right.
-$
+![](img/pf-line-1.jpg)
+![](img/pf-line-2.jpg)
 
-如果我们引入新变量 $K$
-$$
-x=
-\left(
-    \begin{matrix}
-        x_1\\
-        x_2
-    \end{matrix}
-\right)=
-\left(
-    \begin{matrix}
-        M+Nx_2\\
-        Kx_2
-    \end{matrix}
-\right)=
-\left(
-    \begin{matrix}
-        M\\
-        0
-    \end{matrix}
-\right)+x_2 \cdot
-\left(
-    \begin{matrix}
-        N\\
-        K
-    \end{matrix}
-\right)
-$$
+#### 平面
 
 同样，此方法可以拓展至平面：
 
