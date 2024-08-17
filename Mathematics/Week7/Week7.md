@@ -21,11 +21,11 @@ $$
 那我们如何定义 wbb(well balanced bracket) 呢？
 
 $$
-wbb \subseteq \Sigma^*\qquad \Sigma = \left\{ "[", "]"\right\}
+wbb \subseteq \Sigma^*\qquad \Sigma = \left\{ ^"[^", ^"]^"\right\}
 $$
 
 An inductive definition of wbb:
-- Rule 1: $"[]" \in wbb$ (Base Case)
+- Rule 1: $^"[]^" \in wbb$ (Base Case)
 - Rule 2: If $s\in wbb$ then $"[s]" \in wbb$ (Inductive Case 1)
 - Rule 3: If $s, t \in wbb$ then $st \in wbb$ (Inductive Case 2)
 
